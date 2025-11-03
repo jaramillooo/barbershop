@@ -180,7 +180,7 @@ erDiagram
 | ------------------------------- | --------------------- | -------------------------------- | ------------------------ |
 | Register / Login (Google OAuth) | `POST`                | `/auth/google/`                  | Login via Google         |
 | CRUD Services                   | `GET/POST/PUT/DELETE` | `/api/services/`                 | Manage haircut types     |
-| CRUD Barbers                    | `GET/POST`            | `/api/barbers/`                  | Manage barbers           |
+| CRUD Barbers                    | `GET/POST`            | `/api/users/`                    | Manage barbers/users     |
 | Book Appointment                | `POST`                | `/api/appointments/`             | Client books appointment |
 | View Appointments               | `GET`                 | `/api/appointments/?user_id=`    | View all bookings        |
 | Cancel Appointment              | `PATCH`               | `/api/appointments/{id}/cancel/` | Change status            |
@@ -235,3 +235,13 @@ Example:
 * Add **ratings and reviews** for barbers.
 * Add **payment integration (Stripe)** for booking deposits.
 * Add **analytics dashboard** for admin (most booked service, busiest day).
+
+---
+
+## Entrega (ES)
+
+- Documentación de entrega (PDF): ver `docs/ENTREGA_MVP.md` (exportable a PDF).
+- Swagger UI: `/api/swagger/` | ReDoc: `/api/redoc/` | OpenAPI JSON: `/api/openapi.json`.
+- Endpoints principales: `/api/users/`, `/api/profiles/`, `/api/services/`, `/api/schedules/`, `/api/appointments/`, `/api/ratings/`, `/api/payments/`, `/api/calendar-events/`.
+
+Nota: en este MVP `BarberSchedule.day_of_week` se maneja en el rango 1–7 para alinear con las validaciones del modelo.
